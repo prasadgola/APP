@@ -42,7 +42,7 @@ class MainActivity : ComponentActivity() {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun BasavaprasadApp() {
-    var currentDestination by rememberSaveable { mutableStateOf(AppDestinations.READTEXT) }
+    var currentDestination by rememberSaveable { mutableStateOf(AppDestinations.VOICECHAT) }
     NavigationSuiteScaffold(
         navigationSuiteItems = {
             AppDestinations.entries.forEach {

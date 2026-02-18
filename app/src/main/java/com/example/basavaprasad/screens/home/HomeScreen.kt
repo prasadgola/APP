@@ -12,7 +12,7 @@ import androidx.compose.ui.unit.dp
 fun HomeScreen(modifier: Modifier = Modifier) {
     Column(modifier = modifier.padding(16.dp)) {
         Text(
-            text = "Hi I am basavaprasad Gola",
+            text = "Update coming soon",
             style = MaterialTheme.typography.headlineLarge
         )
     }
