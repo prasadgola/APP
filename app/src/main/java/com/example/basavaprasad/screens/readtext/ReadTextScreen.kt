@@ -1,4 +1,4 @@
-package com.example.basavaprasad.screens.readtext
+package com.basavaprasadgola.basavaprasad.screens.readtext
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -50,7 +50,7 @@ import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Share
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.Icon
-import com.example.basavaprasad.R
+import com.basavaprasadgola.basavaprasad.R
 
 @Composable
 fun ReadTextScreen(modifier: Modifier = Modifier) {

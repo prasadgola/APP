@@ -1,4 +1,4 @@
-package com.example.basavaprasad.ui.theme
+package com.basavaprasadgola.basavaprasad.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

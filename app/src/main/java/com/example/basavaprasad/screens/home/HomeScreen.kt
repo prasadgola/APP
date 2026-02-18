@@ -1,4 +1,4 @@
-package com.example.basavaprasad.screens.home
+package com.basavaprasadgola.basavaprasad.screens.home
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding

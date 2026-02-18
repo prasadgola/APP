@@ -1,4 +1,4 @@
-package com.example.basavaprasad.screens.textchat
+package com.basavaprasadgola.basavaprasad.screens.textchat
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement

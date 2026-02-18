@@ -1,4 +1,4 @@
-package com.example.basavaprasad
+package com.basavaprasadgola.basavaprasad
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -22,11 +22,11 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.example.basavaprasad.screens.home.HomeScreen
-import com.example.basavaprasad.screens.textchat.TextChatScreen
-import com.example.basavaprasad.screens.readtext.ReadTextScreen
-import com.example.basavaprasad.screens.voicechat.VoiceChatScreen
-import com.example.basavaprasad.ui.theme.BasavaprasadTheme
+import com.basavaprasadgola.basavaprasad.screens.home.HomeScreen
+import com.basavaprasadgola.basavaprasad.screens.textchat.TextChatScreen
+import com.basavaprasadgola.basavaprasad.screens.readtext.ReadTextScreen
+import com.basavaprasadgola.basavaprasad.screens.voicechat.VoiceChatScreen
+import com.basavaprasadgola.basavaprasad.ui.theme.BasavaprasadTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

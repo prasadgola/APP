@@ -1,4 +1,4 @@
-package com.example.basavaprasad.ui.theme
+package com.basavaprasadgola.basavaprasad.ui.theme
 
 import android.app.Activity
 import android.os.Build

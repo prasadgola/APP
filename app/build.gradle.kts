@@ -1,18 +1,20 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
 }
 
+val keystoreProps = Properties()
+val keystoreFile = rootProject.file("keystore.properties")
+if (keystoreFile.exists()) keystoreProps.load(keystoreFile.inputStream())
+
 android {
-    namespace = "com.example.basavaprasad"
-    compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
-    }
+    namespace = "com.basavaprasadgola.portfolio"
+    compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.basavaprasad"
+        applicationId = "com.basavaprasadgola.portfolio"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -21,19 +23,32 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        create("release") {
+            storeFile = file(keystoreProps["storeFile"] as String)
+            storePassword = keystoreProps["storePassword"] as String
+            keyAlias = keystoreProps["keyAlias"] as String
+            keyPassword = keystoreProps["keyPassword"] as String
+        }
+    }
+
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("release")
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+
     buildFeatures {
         compose = true
     }

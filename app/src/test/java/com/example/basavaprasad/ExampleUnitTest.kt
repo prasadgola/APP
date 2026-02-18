@@ -1,4 +1,4 @@
-package com.example.basavaprasad
+package com.basavaprasadgola.basavaprasad
 
 import org.junit.Test
 
