@@ -10,14 +10,14 @@ val keystoreFile = rootProject.file("keystore.properties")
 if (keystoreFile.exists()) keystoreProps.load(keystoreFile.inputStream())
 
 android {
-    namespace = "com.basavaprasadgola.portfolio"
+    namespace = "com.basavaprasadgola.basavaprasad"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.basavaprasadgola.portfolio"
+        applicationId = "com.basavaprasadgola.basavaprasad"
         minSdk = 24
         targetSdk = 36
-        versionCode = 1
+        versionCode = 2
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -25,10 +25,13 @@ android {
 
     signingConfigs {
         create("release") {
-            storeFile = file(keystoreProps["storeFile"] as String)
-            storePassword = keystoreProps["storePassword"] as String
-            keyAlias = keystoreProps["keyAlias"] as String
-            keyPassword = keystoreProps["keyPassword"] as String
+            val props = keystoreProps
+            if (props.isNotEmpty()) {
+                storeFile = file(props["storeFile"] as String)
+                storePassword = props["storePassword"] as String
+                keyAlias = props["keyAlias"] as String
+                keyPassword = props["keyPassword"] as String
+            }
         }
     }
 
